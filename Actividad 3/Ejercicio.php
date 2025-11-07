@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo "<li>$error</li>";
         }
         echo "</ul>";
-        echo "<a href='index.html'>Volver</a>";
+        echo "<a href='index.HTML'>Volver al formulario</a>";
     } else {
         echo "<h2>Registro exitoso</h2>";
         echo "<p><strong>Nombre:</strong> $nombre $apellido</p>";
