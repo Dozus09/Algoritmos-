@@ -1,0 +1,69 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+
+    background: linear-gradient(-45deg,#3b82f6,#4f46e5,#3b82f6,#1e3a8a);
+    background-size: 400% 400%;
+    animation: fondo 10s ease infinite;
+
+    font-family: "Segoe UI", Arial;
+}
+
+@keyframes fondo {
+    0% { background-position: 0 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0 50%; }
+}
+
+.container-form {
+    width: 100%;
+    max-width: 420px;
+    padding: 28px;
+    margin: 0 20px;
+
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(12px);
+
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.32);
+    color: #fff;
+}
+
+.campo {
+    background: rgba(255,255,255,0.06);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 8px;
+}
+
+.label { color: rgba(255,255,255,0.9); }
+
+.link { color: #c3dafe; cursor: pointer; }
+.link:hover { color: #fff; }
+
+.hidden { display: none !important; }
+
+/* TOAST */
+#toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+.toast-msg {
+    background: rgba(17,17,17,0.92);
+    padding: 10px 16px;
+    border-radius: 8px;
+    color: white;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}

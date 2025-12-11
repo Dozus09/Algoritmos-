@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Sistema Escolar - Login</title>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+<script src="https://kit.fontawesome.com/a2d9d5a54a.js" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="estilos.css">
+
+</head>
+<body>
+
+<div class="container-form zoomIn">
+
+  <!-- LOGIN -->
+  <div id="loginSection">
+    <h1 class="title has-text-white has-text-centered">Iniciar Sesión</h1>
+
+    <div class="field">
+      <label class="label">Correo</label>
+      <div class="control has-icons-left">
+        <input id="loginEmail" class="input campo" type="email" placeholder="usuario@gmail.com" />
+        <span class="icon is-small is-left"><i class="fas fa-envelope"></i></span>
+      </div>
+      <p id="loginEmailError" class="help is-danger"></p>
+    </div>
+
+    <div class="field">
+      <label class="label">Contraseña</label>
+      <div class="control has-icons-left">
+        <input id="loginPassword" class="input campo" type="password" placeholder="••••••" />
+        <span class="icon is-small is-left"><i class="fas fa-lock"></i></span>
+      </div>
+      <p id="loginPasswordError" class="help is-danger"></p>
+    </div>
+
+    <button id="btnLogin" class="button is-link is-fullwidth mb-3">Entrar</button>
+    <button id="btnShowRegister" class="button is-light is-fullwidth mb-3">Registrarse</button>
+
+    <p class="has-text-centered mt-3">
+      <span id="btnShowForgot" class="link">¿Olvidaste tu contraseña?</span>
+    </p>
+  </div>
+
+  <!-- REGISTRO -->
+  <div id="registerSection" class="hidden">
+    <h1 class="title has-text-white has-text-centered">Crear Cuenta</h1>
+
+    <div class="field">
+      <label class="label">Nombre</label>
+      <input id="regName" class="input campo" type="text" />
+      <p id="regNameError" class="help is-danger"></p>
+    </div>
+
+    <div class="field">
+      <label class="label">Correo</label>
+      <input id="regEmail" class="input campo" type="email" />
+      <p id="regEmailError" class="help is-danger"></p>
+    </div>
+
+    <div class="field">
+      <label class="label">Contraseña</label>
+      <input id="regPassword" class="input campo" type="password" />
+      <progress id="strengthBar" class="progress is-small mt-2" value="0" max="100"></progress>
+      <p id="regPasswordError" class="help is-danger"></p>
+    </div>
+
+    <button id="btnRegister" class="button is-success is-fullwidth">Crear Cuenta</button>
+    <button id="btnBackFromRegister" class="button is-light is-fullwidth mt-3">Volver</button>
+  </div>
+
+  <!-- RECUPERAR -->
+  <div id="forgotSection" class="hidden">
+    <h1 class="title has-text-white has-text-centered">Recuperar Contraseña</h1>
+
+    <div class="field">
+      <label class="label">Correo asociado</label>
+      <input id="forgotEmail" class="input campo" type="email" />
+      <p id="forgotEmailError" class="help is-danger"></p>
+    </div>
+
+    <button id="btnRecover" class="button is-warning is-fullwidth">Enviar código</button>
+    <button id="btnBackFromForgot" class="button is-light is-fullwidth mt-3">Volver</button>
+  </div>
+
+</div>
+
+<div id="toast"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

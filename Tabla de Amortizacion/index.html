@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Amortización Premium</title>
+    <!-- Google Fonts for Premium Look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-globes">
+        <div class="globe globe-1"></div>
+        <div class="globe globe-2"></div>
+    </div>
+
+    <main class="glass-container">
+        <header>
+            <h1>Tabla de Amortización</h1>
+            <p>Calcula tus pagos mensuales de forma sencilla y elegante.</p>
+        </header>
+
+        <section class="input-section">
+            <form id="amortizationForm">
+                <div class="input-group">
+                    <label for="amount">Monto del Préstamo ($)</label>
+                    <input type="number" id="amount" placeholder="Ej: 10000" min="1" step="0.01" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="rate">Tasa de Interés Anual (%)</label>
+                    <input type="number" id="rate" placeholder="Ej: 12" min="0.01" step="0.01" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="term">Plazo (Meses)</label>
+                    <input type="number" id="term" placeholder="Ej: 24" min="1" step="1" required>
+                </div>
+
+                <div class="button-group">
+                    <button type="submit" class="btn-primary">Calcular Amortización</button>
+                    <button type="button" id="clearBtn" class="btn-secondary">Limpiar</button>
+                </div>
+            </form>
+            <div id="errorMessage" class="error-message hidden"></div>
+        </section>
+
+        <section id="resultsSection" class="results-section hidden">
+            <div class="summary-cards">
+                <div class="card">
+                    <h3>Pago Mensual</h3>
+                    <p id="monthlyPaymentDisplay">$0.00</p>
+                </div>
+                <div class="card">
+                    <h3>Total Intereses</h3>
+                    <p id="totalInterestDisplay">$0.00</p>
+                </div>
+                <div class="card">
+                    <h3>Total a Pagar</h3>
+                    <p id="totalPaidDisplay">$0.00</p>
+                </div>
+            </div>
+
+            <div class="table-wrapper">
+                <table id="amortizationTable">
+                    <thead>
+                        <tr>
+                            <th>Mes</th>
+                            <th>Pago</th>
+                            <th>Interés</th>
+                            <th>Capital</th>
+                            <th>Saldo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Rows will be injected here -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Board</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fa-solid fa-cube"></i>
+                <span>Nexus</span>
+            </div>
+            <nav class="nav-menu">
+                <a href="#" class="nav-link active">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Inicio</span>
+                </a>
+                <a href="#" class="nav-link">
+                    <i class="fa-solid fa-chart-pie"></i>
+                    <span>Analíticas</span>
+                </a>
+                <a href="#" class="nav-link">
+                    <i class="fa-solid fa-users"></i>
+                    <span>Usuarios</span>
+                </a>
+                <a href="#" class="nav-link">
+                    <i class="fa-solid fa-wallet"></i>
+                    <span>Ventas</span>
+                </a>
+                <a href="#" class="nav-link">
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Configuración</span>
+                </a>
+            </nav>
+            <div class="logout">
+                <a href="#" class="nav-link">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Salir</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="top-bar">
+                <div class="search-bar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Buscar...">
+                </div>
+                <div class="user-profile">
+                    <div class="notifications">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="badge"></span>
+                    </div>
+                    <img src="https://ui-avatars.com/api/?name=Admin+User&background=6366f1&color=fff" alt="User" class="avatar">
+                </div>
+            </header>
+
+            <!-- Dashboard Content -->
+            <div class="dashboard-grid">
+                <!-- Welcome Section -->
+                <div class="welcome-banner">
+                    <div class="banner-text">
+                        <h1>Hola, Admin 👋</h1>
+                        <p>Aquí está el resumen de hoy. Tienes nuevas actualizaciones.</p>
+                    </div>
+                    <button class="btn-primary">Ver Reportes</button>
+                </div>
+
+                <!-- Stats Cards -->
+                <div class="stats-row">
+                    <div class="card stat-card">
+                        <div class="stat-icon income">
+                            <i class="fa-solid fa-arrow-trend-up"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Ingresos</h3>
+                            <p class="number">$24,500</p>
+                            <span class="trend up">+12% vs mes anterior</span>
+                        </div>
+                    </div>
+                    <div class="card stat-card">
+                        <div class="stat-icon users">
+                            <i class="fa-solid fa-user-group"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Usuarios</h3>
+                            <p class="number">1,234</p>
+                            <span class="trend up">+5% nuevos</span>
+                        </div>
+                    </div>
+                    <div class="card stat-card">
+                        <div class="stat-icon orders">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Ventas</h3>
+                            <p class="number">845</p>
+                            <span class="trend down">-2% esta semana</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content Row (Chart + Activity) -->
+                <div class="content-row">
+                    <!-- Simple CSS Bar Chart Section -->
+                    <div class="card chart-section">
+                        <div class="card-header">
+                            <h2>Resumen de Actividad</h2>
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </div>
+                        <div class="chart-container">
+                            <!-- Visual only bars -->
+                            <div class="bar" style="height: 60%;" title="Lun"></div>
+                            <div class="bar" style="height: 80%;" title="Mar"></div>
+                            <div class="bar" style="height: 50%;" title="Mié"></div>
+                            <div class="bar active" style="height: 95%;" title="Jue"></div>
+                            <div class="bar" style="height: 70%;" title="Vie"></div>
+                            <div class="bar" style="height: 40%;" title="Sáb"></div>
+                            <div class="bar" style="height: 65%;" title="Dom"></div>
+                        </div>
+                        <div class="chart-labels">
+                            <span>L</span><span>M</span><span>X</span><span>J</span><span>V</span><span>S</span><span>D</span>
+                        </div>
+                    </div>
+
+                    <!-- Recent Transactions -->
+                    <div class="card transactions-section">
+                        <div class="card-header">
+                            <h2>Ventas Recientes</h2>
+                            <a href="#" class="see-all">Ver todo</a>
+                        </div>
+                        <ul class="transaction-list">
+                            <li class="transaction-item">
+                                <div class="t-icon i-apple"><i class="fa-brands fa-apple"></i></div>
+                                <div class="t-details">
+                                    <h4>iPhone 15 Pro</h4>
+                                    <small>Hace 2 min</small>
+                                </div>
+                                <div class="t-amount">+$999</div>
+                            </li>
+                            <li class="transaction-item">
+                                <div class="t-icon i-spotify"><i class="fa-brands fa-spotify"></i></div>
+                                <div class="t-details">
+                                    <h4>Suscripción Premium</h4>
+                                    <small>Hace 1 hora</small>
+                                </div>
+                                <div class="t-amount">+$12</div>
+                            </li>
+                            <li class="transaction-item">
+                                <div class="t-icon i-figma"><i class="fa-brands fa-figma"></i></div>
+                                <div class="t-details">
+                                    <h4>Licencia Teams</h4>
+                                    <small>Hace 3 horas</small>
+                                </div>
+                                <div class="t-amount">+$45</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
